@@ -1,0 +1,18 @@
+.border {
+  border: 2px solid brown;
+  padding: 15px;
+  
+}
+
+
+.child1 {
+  border: 2px solid green;
+}
+
+.child2 {
+  border: 2px solid blue;
+}
+
+.child3 {
+  border: 2px solid purple;
+}

@@ -1,0 +1,43 @@
+/* Card Styles */
+
+.color-1, .color-2, .color-3, .color-4 {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 10px 15px;
+}
+
+.color-1 {
+  background: blue;
+  border-radius: 25px 25px 0 0;
+  height: 100px;
+}
+
+.color-2 {
+  background: pink;
+  height: 40px;
+}
+
+.color-3 {
+  background: purple;
+  height: 40px;
+}
+
+.color-4 {
+  background: green;
+  height: 40px;
+  border-radius: 0 0 25px 25px;
+}
+
+
+/* Text styles */
+div.hex {
+  background: white !important;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+}
+
+div.hex:hover {
+  opacity: 100%;
+}

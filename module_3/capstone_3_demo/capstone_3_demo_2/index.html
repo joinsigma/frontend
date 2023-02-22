@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+</head>
+
+<body>
+  <main>
+
+    <div class="container mx-auto py-[2em] px-[5em]">
+      <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+        role="alert" id="alert-success">
+        <span class="font-bold">Success!</span> API call is successful
+      </div>
+      <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert"
+        id="alert-fail">
+        <span class="font-medium">Error!</span> API call is unsuccessful, please try again.
+      </div>
+      <p class="text-6xl font-bold text-center my-7">My Lovely Colours</p>
+      <div class="grid grid-cols-3 gap-7" id="main-container">
+      </div>
+    </div>
+  </main>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
