@@ -17,6 +17,7 @@
       >
         {{ method }}
       </button>
+      <button id="clear-button" @click="clear">AC</button>
     </div>
   </div>
 </template>
@@ -26,14 +27,15 @@ export default {
   data() {
     return {
       currentNumber: "",
-      numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      methods: ["+", "-", "=", "*", "/"],
+      numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      methods: ["+", "-", "*", "%", "/", "="],
     };
   },
   methods: {
     append(number) {
       if (
-        !this.currentNumber.match(/^[^a-zA-Z0-9]+$/) ||
+        //this checks to ensure we can't add two symbols
+        !this.currentNumber.match(/^[^a-zA-Z0-9]+$/) || 
         this.currentNumber.length !== 0
       ) {
         this.currentNumber = this.currentNumber + number;
@@ -54,11 +56,16 @@ export default {
         output = Number(str.split("-")[0]) - Number(str.split("-")[1]);
       } else if (str.includes("*")) {
         output = Number(str.split("*")[0]) * Number(str.split("*")[1]);
-      } else {
+      } else if (str.includes("%")) {
+        output = Number(str.split("%")[0]) % Number(str.split("%")[1]);
+      }else {
         output = Number(str.split("/")[0]) / Number(str.split("/")[1]);
       }
       return output.toString();
     },
+    clear(){
+        this.currentNumber = ""
+      }
   },
 };
 </script>
